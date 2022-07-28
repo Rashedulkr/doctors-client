@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import Footer from '../Shared/Footer';
-import AppointementBanner from './AppointementBanner';
-import AvailableAppintments from './AvailableAppintments';
+import AppointmentBanner from './AppointmentBanner';
+import AvailableAppointments from './AvailableAppointments';
 
 const Appointment = () => {
     const [date, setDate] = useState(new Date());
     return (
         <div>
-            <AppointementBanner date={date} setDate={setDate}></AppointementBanner>
-            <AvailableAppintments date={date}></AvailableAppintments>
+            <AppointmentBanner date={date} setDate={setDate}></AppointmentBanner>
+            <AvailableAppointments date={date}></AvailableAppointments>
             <Footer></Footer>
         </div>
     );

@@ -3,12 +3,13 @@ import React, { useState, useEffect } from 'react';
 import BookingModal from './BookingModal';
 import Service from './Service';
 
-const AvailableAppintments = ({ date }) => {
+const AvailableAppointments = ({ date }) => {
     const [services, setServices] = useState([]);
     const [treatment, setTreatment] = useState(null);
 
+    const formattedDate = format(date, 'PP');
     useEffect(() => {
-        fetch('services.json')
+        fetch(`http://localhost:5000/available?date=${formattedDate}`)
             .then(res => res.json())
             .then(data => setServices(data));
     }, [])
@@ -34,4 +35,4 @@ const AvailableAppintments = ({ date }) => {
     );
 };
 
-export default AvailableAppintments;
+export default AvailableAppointments;

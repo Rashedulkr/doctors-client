@@ -1,11 +1,12 @@
 import React from 'react';
 import footer from '../../assets/images/footer.png';
+
 const Footer = () => {
     return (
         <footer style={{
             background: `url(${footer})`,
             backgroundSize: 'cover'
-        }} className=" p-10">
+        }} className="p-10">
             <div className='footer'>
                 <div>
                     <span className="footer-title">Services</span>
@@ -27,10 +28,9 @@ const Footer = () => {
                     <a className="link link-hover">Privacy policy</a>
                     <a className="link link-hover">Cookie policy</a>
                 </div>
-
             </div>
             <div className='my-10 text-center'>
-                <p>Copyright © 2022 - All right reserved by ACME Industries Ltd</p>
+                <p>Copyright © 2022 - All right reserved</p>
             </div>
         </footer>
     );
